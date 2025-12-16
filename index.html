@@ -3,23 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Огляд перезаряджуваної LED-лампи з AliExpress</title>
-  <meta name="description" content="Детальний огляд перезаряджуваної LED-лампи A19 з пультом, 15 кольорами підсвітки та таймером. Де корисна, які переваги та для кого підійде." />
+  <title>Перезаряджувана LED-лампа з пультом – реальний огляд для дому та дачі</title>
+  <meta name="description" content="Чесний огляд перезаряджуваної LED-лампи з AliExpress: як світить під час відключення електрики, чи зручно користуватися пультом і коли така лампа реально виручає." />
   <style>
     :root{
-      --accent:#ff7a00;
-      --accent-soft:#ffe4c4;
-      --bg:#f3f4fb;
+      --accent:#f97316;
+      --accent-soft:#ffedd5;
+      --bg:#f4f5fb;
+      --text:#111827;
     }
-    *{box-sizing:border-box;}
+    *{box-sizing:border-box;margin:0;padding:0;}
     body{
-      margin:0;
       font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif;
       background:
-        radial-gradient(circle at 0% 0%, rgba(255,245,230,0.9) 0, transparent 55%),
+        radial-gradient(circle at 0 0, rgba(254,243,199,0.7) 0, transparent 55%),
         radial-gradient(circle at 100% 100%, rgba(219,234,254,0.9) 0, transparent 55%),
         var(--bg);
-      color:#111;
+      color:var(--text);
+      min-height:100vh;
     }
     .page{
       min-height:100vh;
@@ -28,40 +29,64 @@
       padding:24px 12px;
     }
     .card{
-      max-width:960px;
+      max-width:980px;
       width:100%;
-      background:#ffffffdd;
+      background:#ffffffee;
       backdrop-filter:blur(16px);
       -webkit-backdrop-filter:blur(16px);
-      border-radius:16px;
-      box-shadow:0 18px 45px rgba(15,23,42,0.18);
+      border-radius:18px;
+      box-shadow:0 16px 40px rgba(15,23,42,0.16);
       padding:22px 20px 26px;
     }
+
     header{
       display:flex;
       flex-direction:column;
-      gap:14px;
-      margin-bottom:14px;
+      gap:12px;
+      margin-bottom:16px;
     }
     .top-row{
       display:flex;
-      align-items:center;
       justify-content:space-between;
-      gap:12px;
+      align-items:center;
+      gap:10px;
       flex-wrap:wrap;
+      font-size:13px;
+      color:#6b7280;
     }
-    .badge{
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .brand-icon{
+      width:30px;
+      height:30px;
+      border-radius:10px;
+      background:linear-gradient(135deg,#f97316,#fb923c);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:700;
+      font-size:16px;
+    }
+    .brand-name{
+      font-weight:600;
+      color:#374151;
+    }
+    .tag{
+      padding:4px 10px;
+      border-radius:999px;
+      background:#eef2ff;
+      color:#4338ca;
+      font-size:12px;
+      font-weight:600;
       display:inline-flex;
       align-items:center;
       gap:6px;
-      background:#eef2ff;
-      color:#3730a3;
-      padding:4px 10px;
-      border-radius:999px;
-      font-size:12px;
-      font-weight:600;
     }
-    .badge span{
+    .tag span{
       width:6px;
       height:6px;
       border-radius:999px;
@@ -70,28 +95,46 @@
     h1{
       font-size:24px;
       line-height:1.25;
-      margin:0;
     }
     .subtitle{
-      margin:0;
-      color:#4b5563;
       font-size:14px;
+      color:#4b5563;
+      line-height:1.7;
     }
+
     .hero{
       display:grid;
-      grid-template-columns: minmax(0,2fr) minmax(0,3fr);
+      grid-template-columns:minmax(0,3fr) minmax(0,2.4fr);
       gap:22px;
       margin-top:10px;
       align-items:center;
     }
     .hero-text p{
-      margin:0 0 10px;
-      line-height:1.6;
-      color:#374151;
       font-size:14px;
+      color:#374151;
+      line-height:1.7;
+      margin-bottom:9px;
     }
+    .hero-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+      margin-top:4px;
+    }
+    .hero-badge{
+      font-size:11px;
+      padding:4px 8px;
+      border-radius:999px;
+      background:#f3f4f6;
+      color:#4b5563;
+    }
+
     .cta-main{
-      margin-top:10px;
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
     }
     .btn{
       display:inline-flex;
@@ -100,44 +143,81 @@
       padding:11px 22px;
       border-radius:999px;
       border:none;
-      background:linear-gradient(135deg,var(--accent),#ffa826);
+      background:linear-gradient(135deg,#f97316,#fb923c);
       color:#fff;
       font-weight:600;
       font-size:15px;
       text-decoration:none;
       cursor:pointer;
-      box-shadow:0 10px 25px rgba(248,163,34,0.5);
+      box-shadow:0 12px 28px rgba(248,113,113,0.35);
+      transition:transform .08s ease, box-shadow .08s ease, filter .08s ease;
+      white-space:nowrap;
     }
     .btn:hover{
       filter:brightness(1.05);
-    }
-    .btn-secondary{
-      background:#fff;
-      color:#374151;
-      border:1px solid #e5e7eb;
-      box-shadow:none;
-      margin-left:8px;
+      transform:translateY(-1px);
+      box-shadow:0 16px 36px rgba(248,113,113,0.4);
     }
     .note{
-      margin-top:6px;
       font-size:12px;
       color:#6b7280;
     }
-    .hero-gallery{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:8px;
+
+    .hero-visual{
+      position:relative;
+      border-radius:18px;
+      background:
+        radial-gradient(circle at 50% 0,#fef3c7 0,rgba(15,23,42,0.96) 52%),
+        #020617;
+      padding:18px 16px 20px;
+      color:#e5e7eb;
+      overflow:hidden;
     }
-    .hero-gallery img{
-      width:100%;
+    .lamp-glow{
+      position:absolute;
+      bottom:-40px;
+      left:50%;
+      transform:translateX(-50%);
+      width:260px;
+      height:260px;
+      background:radial-gradient(circle,#fde68a 0,transparent 65%);
+      opacity:0.55;
+      pointer-events:none;
+    }
+    .lamp-image{
+      position:relative;
+      text-align:center;
+      z-index:1;
+    }
+    .lamp-image img{
+      max-width:180px;
+      width:70%;
+      filter:drop-shadow(0 18px 40px rgba(0,0,0,0.7));
+    }
+    .lamp-caption{
+      margin-top:6px;
+      font-size:12px;
+      color:#e5e7eb;
+    }
+    .lamp-badge{
+      position:absolute;
+      top:12px;
+      left:12px;
+      background:rgba(15,23,42,0.85);
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:11px;
+    }
+    .lamp-specs{
+      position:absolute;
+      bottom:10px;
+      right:10px;
+      background:rgba(15,23,42,0.85);
+      padding:6px 10px;
       border-radius:12px;
-      object-fit:cover;
-      height:120px;
-      background:#e5e7eb;
-    }
-    .hero-gallery img.big{
-      grid-column:1/-1;
-      height:170px;
+      font-size:11px;
+      line-height:1.4;
+      text-align:right;
     }
 
     section{
@@ -145,61 +225,107 @@
     }
     h2{
       font-size:18px;
-      margin:0 0 8px;
+      margin-bottom:6px;
     }
     p{
       font-size:14px;
-      line-height:1.65;
-      margin:6px 0 10px;
+      line-height:1.7;
       color:#374151;
+      margin-bottom:6px;
     }
     ul{
       margin:4px 0 12px 18px;
-      padding:0;
-      color:#374151;
       font-size:14px;
+      color:#374151;
     }
     li+li{margin-top:4px;}
 
-    .features{
+    .grid-2{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-      gap:14px;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:16px;
       margin-top:10px;
     }
-    .feature-card{
+    .card-soft{
       background:#f9fafb;
-      border-radius:12px;
-      padding:10px 12px;
+      border-radius:14px;
       border:1px solid #e5e7eb;
+      padding:12px 14px;
     }
-    .feature-title{
-      font-weight:600;
-      font-size:14px;
+    .card-soft h3{
+      font-size:15px;
       margin-bottom:4px;
     }
 
-    .cta-block{
-      margin-top:20px;
-      text-align:center;
-      padding:14px 10px 4px;
+    .pros-cons{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:16px;
+      margin-top:10px;
+    }
+    .pros{
       border-radius:14px;
-      background:linear-gradient(135deg,#fff7ed,#eff6ff);
-      border:1px solid rgba(248,163,34,0.4);
+      border:1px solid #bbf7d0;
+      background:#ecfdf3;
+      padding:10px 14px;
+    }
+    .cons{
+      border-radius:14px;
+      border:1px solid #fee2e2;
+      background:#fef2f2;
+      padding:10px 14px;
+    }
+    .pros h3,.cons h3{
+      font-size:15px;
+      margin-bottom:4px;
+    }
+    .pros ul li::marker{color:#16a34a;}
+    .cons ul li::marker{color:#dc2626;}
+
+    .cta-block{
+      margin-top:22px;
+      padding:14px 14px 12px;
+      border-radius:16px;
+      background:linear-gradient(135deg,#fffbeb,#fee2e2);
+      border:1px solid #fed7aa;
+      text-align:center;
+    }
+
+    .faq{
+      margin-top:18px;
+      border-radius:14px;
+      background:#f9fafb;
+      border:1px solid #e5e7eb;
+      padding:12px 12px 10px;
+    }
+    .faq-item+ .faq-item{
+      margin-top:8px;
+      border-top:1px dashed #e5e7eb;
+      padding-top:8px;
+    }
+    .faq-q{
+      font-weight:600;
+      font-size:14px;
+      margin-bottom:2px;
+    }
+    .faq-a{
+      font-size:13px;
+      color:#4b5563;
+      line-height:1.6;
     }
 
     footer{
       margin-top:18px;
-      font-size:12px;
+      font-size:11.5px;
       color:#6b7280;
       border-top:1px solid #e5e7eb;
-      padding-top:10px;
+      padding-top:9px;
+      line-height:1.6;
     }
 
     @media (max-width:720px){
-      .card{padding:18px 14px 20px;}
+      .card{padding:18px 14px 22px;}
       .hero{grid-template-columns:1fr;}
-      .hero-gallery img.big{height:160px;}
       h1{font-size:20px;}
     }
   </style>
@@ -209,93 +335,169 @@
     <article class="card">
       <header>
         <div class="top-row">
-          <div class="badge"><span></span> Огляд товарів з AliExpress</div>
-          <div style="font-size:13px;color:#6b7280;">Неофіційний незалежний огляд</div>
+          <div class="brand">
+            <div class="brand-icon">L</div>
+            <div>
+              <div class="brand-name">Light &amp; Home Blog</div>
+              <div style="font-size:11px;color:#9ca3af;">Незалежний огляд товарів для дому</div>
+            </div>
+          </div>
+          <div class="tag">
+            <span></span> Огляд товару з AliExpress
+          </div>
         </div>
         <h1>Перезаряджувана LED-лампа з пультом: реальний огляд для дому та дачі</h1>
         <p class="subtitle">
-          Розбираємось, наскільки зручна перезаряджувана LED-лампа формату A19 з пультом,
-          кількома режимами підсвітки та можливістю працювати без електромережі.
+          Розбираємось, наскільки зручна акумуляторна LED-лампа формату A19 із пультом, кількома
+          режимами підсвітки та можливістю працювати без електромережі.
         </p>
       </header>
 
       <div class="hero">
         <div class="hero-text">
-          <p>Це компактна лампа зі вбудованим акумулятором, яку можна використовувати як звичайне світло в патроні, нічник біля ліжка або переносну лампу на випадок відключень електроенергії.</p>
-          <p>У комплекті зазвичай йде пульт дистанційного керування, декілька режимів яскравості та кольорова підсвітка. Нижче — коротко про основні переваги та де така лампа буде реально корисною.</p>
+          <p>
+            Якщо у вас вже були відключення світла або ви часто виїжджаєте на дачу чи в кемпінг,
+            автономна лампа перестає бути «гаджетом для краси» і стає реальною необхідністю.
+          </p>
+          <p>
+            Цю модель можна використовувати як звичайну лампочку в патроні, нічник біля ліжка або
+            переносну лампу на випадок аварійного вимкнення електрики.
+          </p>
+          <div class="hero-badges">
+            <span class="hero-badge">До ~6 годин роботи від акумулятора</span>
+            <span class="hero-badge">Пульт керування та кілька режимів</span>
+          </div>
 
           <div class="cta-main">
             <a class="btn" href="https://lowest-prices.eu/a/73DO7iAXNqCBK7x?dl=V5WcJzt8" target="_blank" rel="noopener noreferrer">
-              Перейти до сторінки лампи на AliExpress
+              Перейти до сторінки товару
             </a>
-            <p class="note">Посилання є партнерським: якщо ви оформите замовлення, ми можемо отримати невелику комісію.</p>
+            <span class="note">Посилання є партнерським: якщо ви щось купите, автор може отримати невелику комісію.</span>
           </div>
         </div>
 
-        <div class="hero-gallery">
-          <img class="big" src="https://via.placeholder.com/800x500.png?text=LED+%D0%BB%D0%B0%D0%BC%D0%BF%D0%B0+A19" alt="Перезаряджувана LED-лампа A19">
-          <img src="https://via.placeholder.com/400x260.png?text=%D0%9B%D0%B0%D0%BC%D0%BF%D0%B0+%D1%83+%D0%BA%D1%96%D0%BC%D0%BD%D0%B0%D1%82%D1%96" alt="LED-лампа як нічник у кімнаті">
-          <img src="https://via.placeholder.com/400x260.png?text=%D0%9B%D0%B0%D0%BC%D0%BF%D0%B0+%D0%B4%D0%BB%D1%8F+%D0%B4%D0%B0%D1%87%D1%96+%D0%B0%D0%B1%D0%BE+%D0%BD%D0%B0%D0%BC%D0%B5%D1%82%D1%83" alt="Переносна лампа для дачі чи кемпінгу">
+        <div class="hero-visual" aria-hidden="true">
+          <div class="lamp-glow"></div>
+          <div class="lamp-badge">LED-лампа A19 • акумулятор</div>
+          <div class="lamp-image">
+            <!-- Тут краще використати своє фото лампи -->
+            <img src="lamp-main.jpg" alt="Перезаряджувана LED-лампа з пультом">
+            <div class="lamp-caption">Приблизний вигляд лампи з комплекту AliExpress</div>
+          </div>
+          <div class="lamp-specs">
+            15 кольорів підсвітки<br/>
+            До 3 рівнів яскравості<br/>
+            Живлення через USB та патрон
+          </div>
         </div>
       </div>
 
       <section>
-        <h2>Ключові переваги лампи</h2>
-        <div class="features">
-          <div class="feature-card">
-            <div class="feature-title">Працює без електрики</div>
-            <p>Вбудований акумулятор дозволяє використовувати лампу під час відключень світла або там, де немає розетки поруч.</p>
+        <h2>Коли така лампа реально виручає</h2>
+        <p>Найбільш корисною ця лампа виявилась у трьох сценаріях:</p>
+        <ul>
+          <li><strong>Відключення світла вдома.</strong> Від патрона або як окремий світильник дає м’яке, але достатнє світло для кімнати.</li>
+          <li><strong>Нічник біля ліжка.</strong> Завдяки пульту яскравість можна зменшити до комфортного рівня перед сном.</li>
+          <li><strong>Дача, балкон, кемпінг.</strong> Лампа з гачком легко вішається в намет чи на гілку дерева.</li>
+        </ul>
+
+        <div class="grid-2">
+          <div class="card-soft">
+            <h3>Комплект, який зазвичай йде разом із лампою</h3>
+            <ul>
+              <li>сама LED-лампа формату A19;</li>
+              <li>пульт дистанційного керування;</li>
+              <li>USB-кабель для заряджання;</li>
+              <li>гачок або тримач для підвішування (залежить від продавця).</li>
+            </ul>
+            <p style="font-size:13px;color:#6b7280;">
+              Конкретна комплектація може трохи відрізнятися від продавця до продавця, тому завжди
+              перевіряйте опис на сторінці замовлення.
+            </p>
           </div>
-          <div class="feature-card">
-            <div class="feature-title">Пульт та режими</div>
-            <p>Можна змінювати яскравість, вмикати тепле чи холодне світло та перемикати кольори, не встаючи з дивана.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-title">Кольорова підсвітка</div>
-            <p>У багатьох варіантах є кілька кольорів та режимів підсвітки — від спокійного нічника до декоративного світла.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-title">Формат A19 / універсальний цоколь</div>
-            <p>Підходить до більшості стандартних світильників — настільних ламп, бра, стельових патронів.</p>
+
+          <div class="card-soft">
+            <h3>Як світить на практиці</h3>
+            <p>
+              У режимі «звичайне біле світло» лампа підходить для кухні, коридору чи невеликої кімнати.
+              Кольоровий режим більше декоративний: для підсвітки, створення затишної атмосфери ввечері
+              або як фон під час перегляду фільмів.
+            </p>
+            <p style="font-size:13px;color:#6b7280;">
+              Для читання краще використовувати максимальну яскравість і холодніше світло.
+            </p>
           </div>
         </div>
 
-        <h2>Де така лампа буде корисною</h2>
-        <p>Найчастіше перезаряджувані LED-лампи беруть для:</p>
-        <ul>
-          <li>квартири — як нічник у спальні або додаткове світло в коридорі;</li>
-          <li>дачі та приватного будинку — для балкону, тераси, підвалу, горища;</li>
-          <li>кемпінгу та поїздок — можна підвісити в наметі або використовувати як переносне світло;</li>
-          <li>резервного освітлення — щоб не залишатися повністю без світла під час відключень.</li>
-        </ul>
-
-        <h2>Наше враження від формату таких ламп</h2>
-        <p>Це не «чарівний» пристрій, який замінить усі лампочки в домі, але як додаткове, мобільне джерело світла така модель дуже зручна. Особливо, якщо важливі можливість підвісити лампу де завгодно, змінювати атмосферу в кімнаті за допомогою підсвітки та мати запасний варіант світла на випадок форс-мажорів.</p>
-
-        <h2>Плюси та можливі мінуси</h2>
-        <ul>
-          <li><strong>Плюси:</strong> мобільність, кілька режимів освітлення, пульт керування, можливість використання без розетки.</li>
-          <li><strong>Мінуси:</strong> потрібно періодично заряджати, яскравість нижча за потужні стаціонарні лампи, дизайн більше утилітарний, ніж декоративний.</li>
-        </ul>
+        <h2>Переваги та недоліки моделі</h2>
+        <div class="pros-cons">
+          <div class="pros">
+            <h3>Що сподобалось</h3>
+            <ul>
+              <li>Працює без розетки – виручає під час відключень.</li>
+              <li>Є пульт: можна вмикати/вимикати, не встаючи з ліжка.</li>
+              <li>15 кольорів підсвітки та кілька режимів яскравості.</li>
+              <li>Підходить і для дому, і для дачі чи кемпінгу.</li>
+              <li>Зручний формат A19 – стає в стандартний патрон.</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h3>Що варто врахувати</h3>
+            <ul>
+              <li>Це не прожектор: світла достатньо для кімнати, але не для великого залу.</li>
+              <li>Якість пластику та пульта залежить від продавця.</li>
+              <li>Потрібно періодично заряджати (як павербанк чи гаджет).</li>
+            </ul>
+          </div>
+        </div>
 
         <div class="cta-block">
-          <p style="margin:0 0 10px;font-size:14px;color:#374151;">
-            Якщо хочете подивитися актуальні фото, характеристики та відгуки покупців —
-            перейдіть безпосередньо на сторінку лампи на AliExpress.
+          <p style="font-size:14px;color:#374151;margin-bottom:10px;">
+            Якщо ви шукаєте автономне світло на випадок відключень або зручний нічник з пультом,
+            варто хоча б переглянути сторінку цієї лампи та відгуки покупців.
           </p>
           <a class="btn" href="https://lowest-prices.eu/a/73DO7iAXNqCBK7x?dl=V5WcJzt8" target="_blank" rel="noopener noreferrer">
-            Відкрити сторінку лампи на AliExpress
+            Перейти до сторінки товару
           </a>
-          <p class="note">Перед замовленням обов’язково перевірте актуальну ціну, рейтинг та умови доставки.</p>
+          <p class="note" style="margin-top:6px;">
+            Натискання відкриє сторінку лампи на зовнішньому сайті (AliExpress / партнерський сервіс).
+            Якщо ви оформите замовлення, автор огляду може отримати невелику комісію без доплат для вас.
+          </p>
+        </div>
+
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q">Чи підходить ця лампа як основне світло в кімнаті?</div>
+            <div class="faq-a">
+              Для невеликої кімнати – так, особливо в режимі максимальної яскравості. Якщо у вас
+              велика кімната, краще розглядати її як додаткове або аварійне освітлення.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Скільки реально тримає акумулятор?</div>
+            <div class="faq-a">
+              Це залежить від режиму яскравості. У більшості випадків вистачає на кілька годин
+              безперервної роботи. Для економії можна перемикатися на більш тепле та приглушене світло.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Чи безпечно залишати лампу ввімкненою на ніч?</div>
+            <div class="faq-a">
+              Це звичайна LED-лампа, яка не нагрівається так, як старі лампи розжарювання. Але завжди
+              дотримуйтесь базових правил безпеки та не накривайте її тканиною або іншими предметами.
+            </div>
+          </div>
         </div>
       </section>
 
       <footer>
-        Ця сторінка є незалежним оглядом товару з маркетплейсу AliExpress.
-        Ми не є офіційним представником магазину чи виробника. Посилання на товар
-        може містити партнерську програму.
+        Цей сайт є незалежною оглядовою сторінкою і не є офіційним представником виробника або
+        продавця лампи. Інформація наведена з ознайомчою метою і не є гарантією результату або
+        офертою. Перед покупкою завжди перевіряйте актуальний опис, характеристики та умови
+        доставки безпосередньо на сторінці товару.
       </footer>
     </article>
   </div>
 </body>
 </html>
+
